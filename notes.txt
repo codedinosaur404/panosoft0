@@ -5,6 +5,10 @@ something very similar in our website for validating the Customer Information.
 I exposed fromEditable and toEditable on the validatedPerson, to handle the 
 transitions between editablePerson and validatedPerson.
 
+EditablePerson needs to allow for improperly formatted data in order to represent the errors
+in the validated person. I had this issue with birthdays, I was unable to display errors 
+because the model wouldn't allow for them. 
+
 I want to hide validation logic inside of the validatedPerson's fromEditable.
 This means it's not possible to generate an invalid Person.
 
