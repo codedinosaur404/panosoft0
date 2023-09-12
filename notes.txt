@@ -1,0 +1,14 @@
+General Notes
+
+I believe modules should be deep, not shallow. A little while ago, I did 
+something very similar in our website for validating the Customer Information.
+I exposed fromEditable and toEditable on the validatedPerson, to handle the 
+transitions between editablePerson and validatedPerson.
+
+I want to hide validation logic inside of the validatedPerson's fromEditable.
+This means it's not possible to generate an invalid Person.
+
+I'd also like the rest of the application only dealing with
+the validatedPerson. It should be easy to add tests
+around the validatedPerson's fromEditable. This modeling should be maintainable 
+for future releases if/when validation logic changes or increases
